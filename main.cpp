@@ -23,9 +23,9 @@ private:
 };
 int main()
 {
-        CopyTest cop;
+        afCopyTest cop;
         std::cout<<"Hello World! "<<std::endl;
         auto obj1 = cop.copyExecute();
-        
+
         return 0;
 }
