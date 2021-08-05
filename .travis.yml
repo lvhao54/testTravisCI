@@ -1,9 +1,19 @@
-dist: trusty
-sudo: false
 language: cpp
 
-script:
-    - cmake .
-    - cmake --build . -- -j2
+dist: trusty
+sudo: required
 
+matrix:
+  - os: linux
+    compiler: gcc
+    env: COMPILER=g++-6
+    addons:
+      apt:
+        sources: ['ubuntu-toolchain-r-test']
+        packages: ['g++-6', 'ninja-build']
+
+script:
+  - mkdir -p build && cd build
+  - cmake ..
+  - cmake --build .. -- -j2
 
