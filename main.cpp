@@ -11,7 +11,7 @@ public:
 };
 class CopyTest
 {
-public:`在这里插入代码片`
+public:
         CopyTest(){}
         ~CopyTest(){}
         CopyObj copyExecute()
